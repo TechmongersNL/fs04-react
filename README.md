@@ -8,6 +8,15 @@ This project was created with [Create React App](https://github.com/facebook/cre
 - Run `npm install` to install all the dependencies listed in package.json
 - Run `npm run start` to start the local development server
 
+## Branches
+
+Check out the different branches to see how this repo evolved over a week of React lectures
+
+- (main) React components & props
+- (react-state) React state with useState & useEffect
+
+You can see the changes from day to day in the ["Pull Requests"](https://github.com/TechmongersNL/fs04-react/pulls) in this repo
+
 ## What are React Hooks?
 
 - Functions that let you perform a specific task inside React, like "hooking into" React state or component lifecycles
