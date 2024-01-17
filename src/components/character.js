@@ -1,4 +1,5 @@
 // You can import other components and use them too!
+import Counter from "./counter";
 import Image from "./image";
 
 // A React component is just a function that returns some JSX
@@ -22,6 +23,7 @@ const Character = (props) => {
       <p>{props.quote}</p>
       {/* using a component within a component also works! */}
       <Image url={props.imgUrl} />
+      <Counter />
       <hr />
     </>
   );
