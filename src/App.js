@@ -7,6 +7,7 @@ import CharacterList from "./components/character-list";
 function App() {
   return (
     <div className="App">
+      {/* Now have a new CharactersList component, to keep our App component more clean and organized */}
       <CharacterList />
     </div>
   );
