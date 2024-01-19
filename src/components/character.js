@@ -9,7 +9,7 @@ import Image from "./image";
 // the keys of the props object match the attributes added into the component when you use it
 // Character component usage: <Character name="Luna" blood="Pure-blood" birthday="Feb 8" quote="Some quote" imgUrl="someurl.com" />
 const Character = (props) => {
-  console.log(props);
+  // console.log(props);
   // React requires you return only one parent element
   // You can use a React Fragment (an empty html element) to fix this issue
   return (
@@ -23,7 +23,12 @@ const Character = (props) => {
       <p>{props.quote}</p>
       {/* using a component within a component also works! */}
       <Image url={props.imgUrl} />
-      <Counter />
+      {/* Passing props from CharacterList even further down into Counter */}
+      <Counter
+        likes={props.likes}
+        increaseLikes={props.increaseLikes}
+        id={props.id}
+      />
       <hr />
     </>
   );
