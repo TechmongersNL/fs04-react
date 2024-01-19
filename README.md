@@ -46,3 +46,7 @@ Fetching data from API flow
 5. Call the async function inside useEffect
 6. Check my console.log and put the data in the state
 7. React will render something on the screen based on state
+
+## Lifting state diagram
+
+![Lifting state diagram](component-diagram.png)
