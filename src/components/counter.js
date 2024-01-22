@@ -24,7 +24,6 @@ const Counter = (props) => {
       >
         Increase likes
       </button>
-      <hr />
       <button onClick={favoriteClicked}>
         {favorite ? "Un-favorite" : "Favorite"}
       </button>
