@@ -1,6 +1,7 @@
 // You can import other components and use them too!
 import Counter from "./counter";
 import Image from "./image";
+import { Link } from "react-router-dom";
 
 // A React component is just a function that returns some JSX
 // Specifically, it returns some JSX with only one parent element
@@ -14,12 +15,6 @@ const Character = (props) => {
   return (
     <>
       <h1>{props.name}</h1>
-      <h2>Blood type</h2>
-      <p>{props.blood}</p>
-      <h2>Birthday</h2>
-      <p>{props.birthday}</p>
-      <h2>Quote</h2>
-      <p>{props.quote}</p>
       {/* using a component within a component also works! */}
       <Image url={props.imgUrl} />
       {/* Passing props from CharacterList even further down into Counter */}
@@ -28,6 +23,14 @@ const Character = (props) => {
         increaseLikes={props.increaseLikes}
         id={props.id}
       />
+      {/* Link to /characters/1 if we're looking at Luna with id 1 */}
+      {/* Link to /characters/2 if we're looking at the second character with id 2 */}
+      {/* ...etc */}
+      {/* Then this will get matched to a Route defined in App.js */}
+      {/* You should never have a colon (:) in your Link "to" */}
+      <Link to={`/characters/${props.id}`}>
+        Go to {props.name}'s detail page
+      </Link>
       <hr />
     </>
   );
