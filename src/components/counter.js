@@ -1,13 +1,10 @@
 import { useState } from "react";
 
-const Counter = () => {
-  // count and favorite are now special React state variables!
-  // When the value of count or favorite changes (by using setCount or setFavorite), React will re-render the Counter component
-  const [count, setCount] = useState(0);
+const Counter = (props) => {
+  // No more local state for count, it's now being passed in through props
+  // const [count, setCount] = useState(0);
+
   const [favorite, setFavorite] = useState(false);
-  //       ^             ^                   ^
-  //  state variable     ^            initial value of the state variable
-  //        function to update the state variable
 
   const favoriteClicked = () => {
     setFavorite(!favorite);
@@ -15,11 +12,14 @@ const Counter = () => {
 
   return (
     <div>
-      <p>Likes: {count}</p>
+      <p>Likes: {props.likes}</p>
       <button
         onClick={() => {
           console.log("Like button was clicked!");
-          setCount(count + 1);
+          // No more local state for count, it's now being passed in through props (increaseLikes)
+          // setCount(count + 1);
+
+          props.increaseLikes(props.id);
         }}
       >
         Increase likes
